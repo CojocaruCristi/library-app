@@ -19,6 +19,7 @@ import { useNavigate } from "react-router-dom";
 
 
 
+
 const pages = [
     {
         name: 'Despre Noi',
@@ -72,9 +73,13 @@ const AppHeader = () => {
     };
 
     return (
-        <AppBar position="static">
-            <Container maxWidth="xl">
-                <Toolbar disableGutters>
+        <div style={{padding:"7vh"}}>{/* Vicol */}
+        <AppBar position="fixed" >
+
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'></link> {/*Vicol*/}
+
+            <Container maxWidth="xl" >
+                <Toolbar disableGutters >
                     <Box  sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} onClick={() => handleNavLinkClick('/')} >
                     <img style={{width: 80, height: 80, cursor: "pointer"}} src={logo}/>
                     </Box>
@@ -97,7 +102,7 @@ const AppHeader = () => {
                     {/*    LOGO*/}
                     {/*</Typography>*/}
 
-                    <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+                    <Box  sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
                             size="large"
                             aria-label="account of current user"
@@ -108,7 +113,7 @@ const AppHeader = () => {
                         >
                             <MenuIcon />
                         </IconButton>
-                        <Menu
+                        <Menu 
                             id="menu-appbar"
                             anchorEl={anchorElNav}
                             anchorOrigin={{
@@ -209,7 +214,8 @@ const AppHeader = () => {
                 </Toolbar>
             </Container>
         </AppBar>
-    );
+        </div>
+);
 }
 
 export default AppHeader;
