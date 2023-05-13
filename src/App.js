@@ -10,8 +10,7 @@ import UsefulInformation from "./components/UsefulInformation/UsefulInformation"
 import NotFoundPage from "./404Page";
 import { useState, useEffect } from "react";
 
-import Grid from '@mui/material/Grid';    {/*Vicol */}
-
+import Grid from '@mui/material/Grid';
 
 
 
@@ -29,27 +28,11 @@ function App() {
         
         <div className="content">
 <Content/>
-{/* Vicol */}
-            {/* <Routes  >
-
-                    <Route path="/" element={<Home />}/>
-                    <Route path="aboutus" element={<AboutUs />} />
-                    <Route path="resources" element={<Resources />} />
-                    <Route path="services" element={<Services />} />
-                    <Route path="exposition" element={<VirtualExposition />} />
-                    <Route path="information" element={<UsefulInformation />} />
-
-
-                    <Route path="*" element={<NotFoundPage />} />
-
-            </Routes> */}
-        {/* Vicol */}
         <Grid style={{background:"black",marginTop:"3vh",padding:"5vh",color:"white",textAlign:"center",fontFamily:"Montserrat"}} container spacing={1} >
         <Grid  item xs={12} md={12}>
         information
         </Grid>
         </Grid>
-        {/* Vicol */}
         </div>
 
 
@@ -59,7 +42,6 @@ function App() {
 }
 
 
-{/* Vicol */}
 function Content() {
   const location = useLocation();
 
@@ -94,7 +76,6 @@ function Content() {
 
       </Routes>
 
-      {/* Vicol */}
     </div>
   );
 }
