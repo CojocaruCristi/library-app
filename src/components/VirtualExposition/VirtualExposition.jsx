@@ -86,8 +86,7 @@ const VirtualExposition = () => {
     const initResults = async () => {
 
        await setLoading(true);
-        // fetch('https://library-api-z8qo.onrender.com/api/getAll').then(response =>response.json()).then((data) => setData(data));
-       const response = await fetch(`https://library-api-z8qo.onrender.com/api/books?bookType=${booksType}&specialty=${specialty}&year=${schoolYear}`);
+        const response = await fetch(`https://library-api-z8qo.onrender.com/api/books?bookType=${booksType}&specialty=${specialty}&year=${schoolYear}`);
         const data = await response.json();
         await setData(data);
         await setIsLoading(false);
@@ -185,7 +184,7 @@ const VirtualExposition = () => {
         }
 
         
-
+            {/* //toDoo */}
             {/* <Box sx={{p: 2}}>
                 <Button onClick={() => setOpen(true)} color="primary" size={"large"} variant="contained" startIcon={<AddIcon />}>
                     Adauga Carte
