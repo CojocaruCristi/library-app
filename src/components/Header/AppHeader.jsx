@@ -34,8 +34,8 @@ const pages = [
         route: '/services',
     },
     {
-        name: 'Expoziția Virtuală',
-        route: '/exposition',
+        name: 'Catalog Electronic',
+        route: '/catalog',
     },
     {
         name: 'Informații Utile',
