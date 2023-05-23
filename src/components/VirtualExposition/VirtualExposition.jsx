@@ -1,7 +1,6 @@
 import Container from "@mui/material/Container";
 import {useEffect, useState} from "react";
 import { DataGrid } from '@mui/x-data-grid';
-import IconButton from '@mui/material/IconButton';
 import AddIcon from '@mui/icons-material/Add';
 import Button from "@mui/material/Button";
 import Box from "@mui/material/Box";
@@ -11,8 +10,7 @@ import Typography from '@mui/material/Typography';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 import InputLabel from '@mui/material/InputLabel';
-
-
+import { specialtiesData } from "../../helpers/specialties.js";
 
 const columns = [
     {
@@ -50,8 +48,6 @@ const columns = [
     },
 ];
 
-const specialtiesData = ['APARATE RADIOELECTRICE DE UZ CASNIC', 'CALCULATOARE', 'ELECTRONICĂ', 'MAŞINI, INSTALAŢII FRIGORIFICE ŞI SISTEME DE CLIMATIZARE', 'TELERADIO COMUNICAŢII']
-
 
 const VirtualExposition = () => {
     const [data, setData] = useState([])
@@ -61,6 +57,7 @@ const VirtualExposition = () => {
     const [schoolYear, setSchoolYear] = useState();
     const [specialty, setSpecialty] = useState();
     const [isLoading, setIsLoading] = useState(false);
+    
     const addNewBook = async (data) => {
 
 
@@ -74,8 +71,10 @@ const VirtualExposition = () => {
         });
         const newBook = await response.json();
 
+        setBooksType(data.bookType);
+        !!data.specialty && setSpecialty(data.specialty);
+        !!data.schoolYear && setSchoolYear(data.schoolYear);
 
-        await setData((prevState) => [...prevState, newBook]);
 
         setLoading(false);
         setOpen(false);
@@ -85,11 +84,13 @@ const VirtualExposition = () => {
 
     const initResults = async () => {
 
-       await setLoading(true);
+
+
+        setIsLoading(true);
         const response = await fetch(`https://library-api-z8qo.onrender.com/api/books?bookType=${booksType}&specialty=${specialty}&year=${schoolYear}`);
         const data = await response.json();
         await setData(data);
-        await setIsLoading(false);
+        setIsLoading(false);
     }
 
     useEffect(() => {
@@ -103,7 +104,18 @@ const VirtualExposition = () => {
             minHeight: '100vh'
         }}>
 
-        <Breadcrumbs aria-label="breadcrumb">
+            {/* //toDoo */}
+            <Box sx={{p: 2}}>
+                <Button onClick={() => setOpen(true)} color="primary" size={"large"} variant="contained" startIcon={<AddIcon />}>
+                    Adauga Carte
+                </Button>
+                <BookFormModal open={open} setOpen={setOpen} onSubmit={addNewBook} loading={loading} setLoading={setLoading} />
+            </Box>
+
+
+        <Breadcrumbs aria-label="breadcrumb" style={{
+            marginBottom: 20,
+        }}>
 
             <Typography variant="h5" style={{cursor: 'pointer', color: booksType === 'general' && 'black'}} onClick={() => {
                 setBooksType('general');
@@ -174,23 +186,16 @@ const VirtualExposition = () => {
                     width: 200,
                 }}
                 >
-                   <MenuItem value={10}>10</MenuItem>
-                   <MenuItem value={11}>11</MenuItem>
-                   <MenuItem value={12}>12</MenuItem>
+                   <MenuItem value={10}>I</MenuItem>
+                   <MenuItem value={11}>II</MenuItem>
+                   <MenuItem value={12}>III</MenuItem>
                 </Select>
                 </Box>
                 
             )
         }
 
-        
-            {/* //toDoo */}
-            {/* <Box sx={{p: 2}}>
-                <Button onClick={() => setOpen(true)} color="primary" size={"large"} variant="contained" startIcon={<AddIcon />}>
-                    Adauga Carte
-                </Button>
-                <BookFormModal open={open} setOpen={setOpen} onSubmit={addNewBook} loading={loading} setLoading={setLoading} />
-            </Box> */}
+    
             <DataGrid
                 rows={data}
                 loading={isLoading}
