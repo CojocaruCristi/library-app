@@ -67,16 +67,6 @@ const VirtualExposition = () => {
                     <TitleImage title="Expoziție virtuală" />
 
 
-
-
-                    setBooksType(data.bookType);
-                    !!data.specialty && setSpecialty(data.specialty);
-                    !!data.schoolYear && setSchoolYear(data.schoolYear);
-
-
-
-
-
                     <Grid item xs={12} md={6} style={{ padding: "3vh" }}>
                         <Item id="allitems" style={{ color: "black", textAlign: "center", padding: "3vh", height: "95%" }}>
                             <img src={Martie3} style={{ height: "60vh", width: "90%", objectFit: "contain" }} />
@@ -87,8 +77,6 @@ const VirtualExposition = () => {
 
                     <Grid item xs={12} md={6} style={{ padding: "3vh" }}>
                         <Item id="allitems" style={{ color: "black", textAlign: "center", padding: "3vh", height: "95%" }}>
-                            {/* <img src={Literatura_si_arta} style={{width:"100%",height:"60%",objectFit: "contain"}} />
-<p><b>Literatura și Artă: </b>săptamânal al scriitorilor din RM.</p> */}
 
                             <Carousel showThumbs={false} showArrows={true} infiniteLoop={true} showStatus={false} autoPlay={true} labels={false}>
                                 <img src={Februarie14} style={{ height: "60vh", objectFit: "contain" }} />
