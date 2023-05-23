@@ -16,14 +16,12 @@ import AdbIcon from '@mui/icons-material/Adb';
 import logo from './../../assets/logo.jpg'
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-
-
-
+import {useState} from 'react';
 
 const pages = [
     {
         name: 'Despre Noi',
-        route: '/aboutus',
+        route: '/',
     },
     {
         name: 'Resurse',
@@ -41,14 +39,19 @@ const pages = [
         name: 'Informații Utile',
         route: '/information',
     },
+    {
+        name: 'Contacte',
+        route: '/contact',
+    }
 ]
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+
 
 const AppHeader = () => {
 
 
     const navigate = useNavigate();
-
+    const [value1,setactive]=useState("inactive");
     const [anchorElNav, setAnchorElNav] = React.useState(null);
     const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -63,20 +66,21 @@ const AppHeader = () => {
         setAnchorElNav(null);
 
     };
-    const handleNavLinkClick = (route) => {
+    const handleNavLinkClick = route => {
+          
         setAnchorElNav(null);
         return navigate(route);
     }
+
+
 
     const handleCloseUserMenu = () => {
         setAnchorElUser(null);
     };
 
     return (
-        <div style={{padding:"7vh"}}>{/* Vicol */}
+        <div style={{padding:"7vh"}}>
         <AppBar position="fixed" >
-
-            <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'></link>
 
             <Container maxWidth="xl" >
                 <Toolbar disableGutters >
@@ -134,13 +138,16 @@ const AppHeader = () => {
                     </Box>
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                         {pages.map((page) => (
-                            <Button
+
+                                <Button 
+                                id={page.route}
                                 key={page.route}
                                 onClick={() => handleNavLinkClick(page.route)}
-                                sx={{ my: 2, color: 'white', display: 'block' }}
+                                sx={{ my: 2, color: 'white', display:'block'}}
                             >
                                 {page.name}
                             </Button>
+
                         ))}
                     </Box>
 
