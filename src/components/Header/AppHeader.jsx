@@ -32,7 +32,11 @@ const pages = [
         route: '/services',
     },
     {
-        name: 'Expoziția Virtuală',
+        name: 'Catalog Electronic',
+        route: '/catalog',
+    },
+    {
+        name: 'Expozitie Virtuala',
         route: '/exposition',
     },
     {

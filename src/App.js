@@ -15,9 +15,9 @@ import Contact from "./components/contact/Contact";
 import NotFoundPage from "./404Page";
 
 import { useState, useEffect } from "react";
-
+import Footer from './components/Footer/Footer'
 import Grid from '@mui/material/Grid';
-
+import ElectronicCatalog from './components/ElectronicCatalog/ElectronicCatalog';
 
 
 function App() {
@@ -39,18 +39,14 @@ function App() {
       </header>
         
         
-        
-        
-        
-        
         <div
-      className={`${transitionStage}`}
-      onAnimationEnd={() => {
-        if (transitionStage === "fadeOut") {
-          setTransistionStage("fadeIn");
-          setDisplayLocation(location);
-        }
-      }}
+          className={`${transitionStage}`}
+          onAnimationEnd={() => {
+            if (transitionStage === "fadeOut") {
+              setTransistionStage("fadeIn");
+              setDisplayLocation(location);
+            }
+          }}
     >
       <Routes location={displayLocation}>
 
@@ -58,6 +54,7 @@ function App() {
                     <Route path="" element={<AboutUs />} />
                     <Route path="resources" element={<Resources />} />
                     <Route path="services" element={<Services />} />
+                    <Route path="catalog" element={<ElectronicCatalog />} />
                     <Route path="exposition" element={<VirtualExposition />} />
                     <Route path="information" element={<UsefulInformation />} />
                     <Route path="contact" element={<Contact />} />
@@ -71,7 +68,7 @@ function App() {
 
         
 
-        <Contact_information />
+        <ContactInformation />
         
     </div>
   );
@@ -85,7 +82,7 @@ function App() {
 
 
 
-const Contact_information=()=>{
+const ContactInformation=()=>{
 return(
   <>
         <Grid style={{background:"black",color:"white",marginTop:"10vh",position:"absolute"}} container spacing={1} >
