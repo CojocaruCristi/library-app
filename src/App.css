@@ -1,3 +1,73 @@
+  /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,200&display=swap'); */
+  @import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@500&display=swap');
+
+
+
+
+  .techerpublic{
+    height:5vh;
+  }
+  .periodpublic{
+    height:10vh;
+  }
+
+#imgtitl{
+  padding:3vh 3vh 50vh 3vh;
+  text-align:center;
+}
+
+
+
+
+body{
+  font-family:"Zilla Slab";
+}
+#allitems{
+  padding:3vh;
+  text-align:left;
+  background-color:#f2eeed;
+font-family:"Zilla Slab";
+color:black;
+font-size: 18px;
+}
+
+
+@media only screen and (max-width: 400px) {
+  #imgtitl {
+    padding:3vh 3vh 10vh 3vh;
+  }
+ .techerpublic{
+    height:15vh;
+  }
+
+  .periodpublic{
+    height:35vh;
+  }
+  #allitems{
+    font-size: 15px;
+  }
+}
+
+#title{
+  filter: drop-shadow(1px 1px 2px black);
+  transition: 1s;
+}
+#title:hover{
+
+  margin-left: 40px;
+  transition: 0.5s;
+}
+
+/* #bgkimg{
+  transition: 1s;
+}
+#bgkimg:hover{
+  
+filter: blur(5px);
+transition: 0.5s;
+} */
+
+
 
 .content {
   padding-top: 20px;
@@ -5,7 +75,7 @@
 
 
 .App {
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
   text-align: center;
 }
 
