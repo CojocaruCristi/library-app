@@ -130,15 +130,9 @@ const Email = () => {
 
         e.preventDefault();
         if(formRef) {
-
-            console.log('values------->', name, mail, message);
-    
-           
-          
       
            emailjs.sendForm('service_om5icxw', 'template_hgw0k5q', formRef.current, '1H-xXWHGLldhkGhbm')
             .then((result) => {
-                console.log(result.text);
                 formRef.current.reset();
             }).catch(error => console.log(error));
         }
