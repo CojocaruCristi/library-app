@@ -18,6 +18,7 @@ import { useState, useEffect } from "react";
 import Footer from './components/Footer/Footer'
 import Grid from '@mui/material/Grid';
 import ElectronicCatalog from './components/ElectronicCatalog/ElectronicCatalog';
+import SignIn from './components/SignIn/SignIn';
 
 
 function App() {
@@ -58,6 +59,7 @@ function App() {
                     <Route path="exposition" element={<VirtualExposition />} />
                     <Route path="information" element={<UsefulInformation />} />
                     <Route path="contact" element={<Contact />} />
+                    <Route path="login" element={<SignIn />} />
                     {/* <Route path="mission" element={<Mission />} /> */}
                     <Route path="*" element={<NotFoundPage />} />
 
