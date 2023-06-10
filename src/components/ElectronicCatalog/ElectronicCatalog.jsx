@@ -14,6 +14,8 @@ import { specialtiesData } from "../../helpers/specialties.js";
 import { TextField } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 
+import TitleImage from "./../../components/title/Title";
+
 const textFieldStyle = {
     width: '100%',
     marginBottom: '20px',
@@ -178,6 +180,8 @@ const ElectronicCatalog = () => {
 
 
     return (
+        <div style={{marginTop:"-60vh" }}>
+                    <TitleImage title="Catalog electronic"/>
         <Container maxWidth={"lg"} style={{
             minHeight: '100vh'
         }}>
@@ -309,6 +313,7 @@ const ElectronicCatalog = () => {
                 pageSizeOptions={[5, 25, 50, 100]}
             />
         </Container>
+        </div>
     )
 }
 

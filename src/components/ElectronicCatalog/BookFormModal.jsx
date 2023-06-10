@@ -212,7 +212,7 @@ const BookFormModal = ({open, setOpen, onSubmit, loading, setLoading}) => {
                     }
                     
                     <TextField
-                        label="Autorii"
+                        label="APARATE RADIOELECTRICE DE UZ CASNICrii"
                         variant="outlined"
                         style={textFieldStyle}
                         onChange={(e) => setAuthor(e.target.value)}
