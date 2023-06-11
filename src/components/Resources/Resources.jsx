@@ -498,7 +498,7 @@ const Teacher_publications=()=>{
 
 <div style={{padding:"1vh",height:"100%",width:"100%"}}>
     <Carousel  showThumbs={false} showArrows={true} infiniteLoop={true} showStatus={false} autoPlay={true} labels={false} >
-                <img src={tp91} style={{ objectFit: "cover"}} />
+                <img src={tp91} style={{ objectFit:"cover"}} />
     </Carousel>
     </div>
 </Grid>
