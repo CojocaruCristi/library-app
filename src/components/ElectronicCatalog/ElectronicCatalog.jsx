@@ -182,6 +182,10 @@ const ElectronicCatalog = () => {
     return (
         <div style={{marginTop:"-60vh" }}>
                     <TitleImage title="Catalog electronic"/>
+            <h2>Bine ați venit pe pagina Catalogului electronic al Bibliotecii I.P. Centrul de Excelență în Energetică și Electronică.</h2>
+            <h2>Catalogul electronic oferă utilizatorilor acces la conținutul electronic al cărților din colecția I.P. CEEE.</h2>
+            <h2>Puteți obține acces imediat la colecțiile bibliotecii aplicând filtre la fiecare atribut al cărții.</h2>
+            <br/><br/>
         <Container maxWidth={"lg"} style={{
             minHeight: '100vh'
         }}>
