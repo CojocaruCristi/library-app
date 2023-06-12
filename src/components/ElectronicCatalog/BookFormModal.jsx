@@ -126,7 +126,7 @@ const BookFormModal = ({open, setOpen, onSubmit, loading, setLoading}) => {
                                     {
                                         specialtiesData.map(el => {
                                             return (
-                                                <MenuItem value={el}>{el}</MenuItem>
+                                                <MenuItem value={el.key}>{el.name}</MenuItem>
                                             )
                                         })
                                     }

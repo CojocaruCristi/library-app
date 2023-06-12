@@ -211,13 +211,17 @@ const ElectronicCatalog = () => {
                 <Typography variant="h5" style={{ cursor: 'pointer', color: booksType === 'general' && 'black' }} onClick={() => {
                     setBooksType('general');
                     setSpecialty();
-                    setData([])
+                    setData([]);
+                    setSearchedData([]);
+                    setInputValue('');
                 }} >Curs General</Typography>
 
                 <Typography variant="h5" style={{ cursor: 'pointer', color: booksType === 'specialty' && 'black' }} onClick={() => {
                     setBooksType('specialty');
                     setSchoolYear();
-                    setData([])
+                    setData([]);
+                    setSearchedData([]);
+                    setInputValue('');
                 }} >Specialitate</Typography>
 
             </Breadcrumbs>
@@ -247,7 +251,7 @@ const ElectronicCatalog = () => {
                             {
                                 specialtiesData.map(el => {
                                     return (
-                                        <MenuItem value={el}>{el}</MenuItem>
+                                        <MenuItem value={el.key}>{el.name}</MenuItem>
                                     )
                                 })
                             }
