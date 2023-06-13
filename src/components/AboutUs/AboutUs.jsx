@@ -15,6 +15,12 @@ import slideimg1 from './../../assets/14-februarie3.jpg';
 import slideimg2 from './../../assets/ion-creanga.jpg';
 import slideimg3 from './../../assets/marte.jpg';
 
+import bibliotecahasdeu from './../../assets/bibliotecahasdeu.jpg';
+import bibliotecaince from './../../assets/bibliotecaince.jpg';
+import bibliotecatransport from './../../assets/bibliotecatransport.jpg';
+import bibliotecautm from './../../assets/bibliotecautm.jpg';
+
+
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
@@ -160,8 +166,52 @@ Colecțiile Bibliotecii CEEE sunt organizate și dezvoltate în raport cu necesi
 
 
 
+<Grid item xs={12} md={12} style={{padding:"6vh"}} >
+<Item id="allitems" style={{height:"50%",textAlign:"center"}}>
+<h2 style={{marginTop:"0px"}}> Parteneriate</h2>
+</Item>
+</Grid>
 
 
+
+
+
+
+
+
+<Grid item xs={12} md={3} style={{padding:"3vh"}} >
+<Item id="allitems" style={{height:"90%",textAlign:"center"}}>
+
+<img href="http://www.hasdeu.md/" src={bibliotecahasdeu} style={{width:"100%",objectFit: "conver"}} />
+<a href="http://www.hasdeu.md/" style={{color:"black"}} target="_blank"><h3 > Biblioteca Municipală B.P. HASDEU</h3></a>
+
+</Item>
+</Grid>
+
+<Grid item xs={12} md={3} style={{padding:"3vh"}} >
+<Item id="allitems" style={{height:"90%",textAlign:"center"}}>
+<img src={bibliotecaince} style={{width:"100%",objectFit: "cover"}} />
+
+<a href="https://ince.md/" style={{color:"black"}} target="_blank"><h3 >Biblioteca Institutul Național de Cercetări Economice</h3></a>
+</Item>
+</Grid>
+
+<Grid item xs={12} md={3} style={{padding:"3vh"}} >
+<Item id="allitems" style={{height:"90%",textAlign:"center"}}>
+<img src={bibliotecatransport} style={{width:"100%",objectFit: "cover"}} />
+
+<a href="https://cetauto.md/ro/biblioteca/" style={{color:"black"}} target="_blank"><h3 >Biblioteca Colegiului de Transporturi</h3></a>
+
+</Item>
+</Grid>
+
+<Grid item xs={12} md={3} style={{padding:"3vh"}} >
+<Item id="allitems" style={{height:"90%",textAlign:"center"}}>
+<img src={bibliotecautm} style={{width:"100%",objectFit: "cover"}} />
+
+<a href="http://library.utm.md/" style={{color:"black"}} target="_blank"><h3 >Biblioteca Tehnico–Ştiinţifică a Universităţii Tehnice a Moldovei</h3></a>
+</Item>
+</Grid>
 
 
 

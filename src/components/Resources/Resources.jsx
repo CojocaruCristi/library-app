@@ -8,6 +8,11 @@ import Button from '@mui/material/Button';
 import slideimg1 from './../../assets/14-februarie3.jpg';
 import slideimg2 from './../../assets/ion-creanga.jpg';
 import slideimg3 from './../../assets/marte.jpg';
+
+import slideimg4 from './../../assets/expozitii-tematice.jpg';
+import slideimg5 from './../../assets/mihai-eminescu2.jpg';
+import slideimg6 from './../../assets/octavian-goga.jpg';
+
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { useEffect } from 'react';
@@ -23,6 +28,32 @@ import Univers_pedagogic from './../../assets/univers_pedagogic.jpg';
 import Radio from './../../assets/radio.jpg';
 
 import TitleImage from "./../../components/title/Title";
+
+import tp1 from './../../assets/teacherpublication/Aplicatii ale matenaticii.png';
+import tp2 from './../../assets/teacherpublication/Cuprins_1_Aplicatii ale matenaticii.jpg';
+import tp3 from './../../assets/teacherpublication/Cuprins_2_Aplicatii ale matenaticii.jpg';
+
+import tp4 from './../../assets/teacherpublication/Diseminarea bunelor practici prin prisma produsului educatiomal editia 2.png';
+import tp41 from './../../assets/teacherpublication/Curpins_1_Diseminarea bunelor practici prin prisma produsului educatiomal editia 2.jpg';
+import tp42 from './../../assets/teacherpublication/Curpins_2_Diseminarea bunelor practici prin prisma produsului educatiomal editia 2.jpg';
+
+
+import tp5 from './../../assets/teacherpublication/Diseminarea bunelor practici prin prisma produsului educational editia 3.png';
+import tp51 from './../../assets/teacherpublication/Curpins_1_Diseminarea bunelor practici prin prisma produsului educational editia 3.jpg';
+import tp52 from './../../assets/teacherpublication/Cuprins_2_Diseminarea bunelor practici prin prisma produsului educational editia 3.jpg';
+
+import tp6 from './../../assets/teacherpublication/Educatia interdiciplinara aplicativa si practica-conditie pentru angajabilitatea tinerilor specialisti.png';
+import tp61 from './../../assets/teacherpublication/Cuprins_Educatia interdiciplinara aplicativa si practica-conditie pentru angajabilitatea tinerilor specialisti.jpg';
+
+import tp7 from './../../assets/teacherpublication/Educatia steam imperativ al timpului.png';
+import tp71 from './../../assets/teacherpublication/Cuprins_Educatia steam imperativ al timpului.jpg';
+
+import tp8 from './../../assets/teacherpublication/Implementarea educatiei steam prin proiecte in cadrul ariei curriculare matematica si stiinte.png';
+import tp81 from './../../assets/teacherpublication/Cuprins_Implementarea educatiei steam prin proiecte in cadrul ariei curriculare matematica si stiinte.jpg';
+
+
+import tp9 from './../../assets/teacherpublication/Formarea continua si dezvoltarea profesionala a cadrului didactic premisa calitatii in educatie.png';
+import tp91 from './../../assets/teacherpublication/Cuprins_Formarea continua si dezvoltarea profesionala a cadrului didactic premisa calitatii in educatie.jpg';
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -86,7 +117,7 @@ Structura și nivelul științific colecției Bibliotecii corespunde profilului 
  <h2>Biblioteca Departamentului Electronică:</h2>
  <div><b>Biblioteca Departamentului Electronică</b> – 26261 volume (cărți, documente audiovizuale, electronice și periodice), 4189 titluri.</div>
  <br/>
-<Slider/>
+<Slider2/>
 </Item>
 </Grid>
 
@@ -148,7 +179,16 @@ function Slider() {
     );
   }
 
-
+  function Slider2() {
+    
+    return (
+        <Carousel showThumbs={false} showArrows={true} infiniteLoop={true} showStatus={false}autoPlay={true} labels={false}>
+                <img src={slideimg4} style={{width:"100vh",height:"70vh",objectFit: "contain"}} />
+                <img src={slideimg5} style={{width:"100vh",height:"70vh",objectFit: "contain"}} />
+                <img src={slideimg6} style={{width:"100vh",height:"70vh",objectFit: "contain"}} />
+        </Carousel>
+    );
+  }
 
 
 
@@ -271,19 +311,60 @@ const Teacher_publications=()=>{
 
 
 
-<Grid item xs={12} md={3} style={{padding:"3vh"}}>
- <Item id="allitems" style={{color:"black",textAlign:"left",padding:"3vh",height:"80%"}}>
- {/* <img src={Faclia} style={{width:"100%",height:"60%",objectFit: "contain"}} />
-<p><b>Făclia: </b>săptamânal de informație, opinie și cultură pedagogică.</p> */}
+<Grid  item xs={12} md={6} style={{padding:"6vh"}}>
+ <Item id="allitems" style={{color:"black",textAlign:"center",padding:"3vh",height:"90%"}}>
+{/* <p><b>Făclia: </b>săptamânal de informație, opinie și cultură pedagogică.</p> */}
+
+<div style={{display:"flex"}}>
+
+
+ <Grid item xs={12} md={6} style={{padding:"3vh"}}>
+
+ <img src={tp1} style={{height:"100%",objectFit:"cover",width:"100%",padding:"1vh"}} />
+ </Grid>
+ <Grid item xs={12} md={6} style={{padding:"3vh",display:"flex"}}>
+
+<div style={{padding:"1vh",height:"100%",width:"100%"}}>
+    <Carousel  showThumbs={false} showArrows={true} infiniteLoop={true} showStatus={false} autoPlay={true} labels={false} >
+                <img src={tp2} style={{ objectFit: "cover"}} />
+                <img src={tp3} style={{ objectFit: "cover"}} />
+    </Carousel>
+    </div>
+</Grid>
+
+</div>
+<p ><b><h2> Aplicații ale matematicii</h2></b></p>
 </Item>
 </Grid>
 
 
-<Grid item xs={12} md={3} style={{padding:"3vh"}}>
- <Item id="allitems" style={{color:"black",textAlign:"left",padding:"3vh",height:"80%"}}>
- {/* <img src={Literatura_si_arta} style={{width:"100%",height:"60%",objectFit: "contain"}} />
-<p><b>Literatura și Artă: </b>săptamânal al scriitorilor din RM.</p> */}
 
+
+
+
+<Grid  item xs={12} md={6} style={{padding:"6vh"}}>
+ <Item id="allitems" style={{color:"black",textAlign:"center",padding:"3vh",height:"90%"}}>
+{/* <p><b>Făclia: </b>săptamânal de informație, opinie și cultură pedagogică.</p> */}
+
+<div style={{display:"flex"}}>
+
+
+ <Grid item xs={12} md={6} style={{padding:"3vh"}}>
+
+ <img src={tp4} style={{height:"100%",objectFit:"cover",width:"100%",padding:"1vh"}} />
+ </Grid>
+ <Grid item xs={12} md={6} style={{padding:"3vh",display:"flex"}}>
+
+<div style={{padding:"1vh",height:"100%",width:"100%"}}>
+    <Carousel  showThumbs={false} showArrows={true} infiniteLoop={true} showStatus={false} autoPlay={true} labels={false} >
+                <img src={tp41} style={{ objectFit: "cover"}} />
+                <img src={tp42} style={{ objectFit: "cover"}} />
+    </Carousel>
+    </div>
+</Grid>
+
+</div>
+<p ><b><h2> Diseminarea bunelor practici prin prisma produsului educațional<br/>ediția 2</h2></b></p>
 </Item>
 </Grid>
 
@@ -292,25 +373,140 @@ const Teacher_publications=()=>{
 
 
 
-<Grid item xs={12} md={3} style={{padding:"3vh"}}>
- <Item id="allitems" style={{color:"black",textAlign:"left",padding:"3vh",height:"80%"}}>
- {/* <img src={Univers_pedagogic_pro} style={{width:"100%",height:"60%",objectFit: "contain"}} />
- <p><b>Univers pedagogic pro: </b>săptamânal al MInisterului Educației și Cercetării al RM și al Institutului de Științe ale Educației.</p> */}
+<Grid  item xs={12} md={6} style={{padding:"6vh"}}>
+ <Item id="allitems" style={{color:"black",textAlign:"center",padding:"3vh",height:"90%"}}>
+{/* <p><b>Făclia: </b>săptamânal de informație, opinie și cultură pedagogică.</p> */}
+
+<div style={{display:"flex"}}>
 
 
+ <Grid item xs={12} md={6} style={{padding:"3vh"}}>
+
+ <img src={tp5} style={{height:"100%",objectFit:"cover",width:"100%",padding:"1vh"}} />
+ </Grid>
+ <Grid item xs={12} md={6} style={{padding:"3vh",display:"flex"}}>
+
+<div style={{padding:"1vh",height:"100%",width:"100%"}}>
+    <Carousel  showThumbs={false} showArrows={true} infiniteLoop={true} showStatus={false} autoPlay={true} labels={false} >
+                <img src={tp51} style={{ objectFit: "cover"}} />
+                <img src={tp52} style={{ objectFit: "cover"}} />
+    </Carousel>
+    </div>
+</Grid>
+
+</div>
+<p ><b><h2> Diseminarea bunelor practici prin prisma produsului educațional <br/>ediția 3</h2></b></p>
 </Item>
 </Grid>
 
-<Grid item xs={12} md={3} style={{padding:"3vh"}}>
- <Item id="allitems" style={{color:"black",textAlign:"left",padding:"3vh",height:"80%"}}>
- {/* <img src={Ziarul_de_garda} style={{width:"100%",height:"60%",objectFit: "contain"}} />
- <p><b>Ziarul de gardă: </b>săptamânal independent de investigații.</p> */}
 
 
+
+<Grid  item xs={12} md={6} style={{padding:"6vh"}}>
+ <Item id="allitems" style={{color:"black",textAlign:"center",padding:"3vh",height:"90%"}}>
+{/* <p><b>Făclia: </b>săptamânal de informație, opinie și cultură pedagogică.</p> */}
+
+<div style={{display:"flex"}}>
+
+
+ <Grid item xs={12} md={6} style={{padding:"3vh"}}>
+
+ <img src={tp6} style={{height:"100%",objectFit:"cover",width:"100%",padding:"1vh"}} />
+ </Grid>
+ <Grid item xs={12} md={6} style={{padding:"3vh",display:"flex"}}>
+
+<div style={{padding:"1vh",height:"100%",width:"100%"}}>
+    <Carousel  showThumbs={false} showArrows={true} infiniteLoop={true} showStatus={false} autoPlay={true} labels={false} >
+                <img src={tp61} style={{ objectFit: "cover"}} />
+                {/* <img src={tp62} style={{ objectFit: "cover"}} /> */}
+    </Carousel>
+    </div>
+</Grid>
+
+</div>
+<p ><b><h2> Educația interdiciplinară, aplicativă și practică - condiție pentru angajabilitatea tinerilor specialiști</h2></b></p>
 </Item>
 </Grid>
 
 
+<Grid  item xs={12} md={6} style={{padding:"6vh"}}>
+ <Item id="allitems" style={{color:"black",textAlign:"center",padding:"3vh",height:"90%"}}>
+{/* <p><b>Făclia: </b>săptamânal de informație, opinie și cultură pedagogică.</p> */}
+
+<div style={{display:"flex"}}>
+
+
+ <Grid item xs={12} md={6} style={{padding:"3vh"}}>
+
+ <img src={tp7} style={{height:"100%",objectFit:"cover",width:"100%",padding:"1vh"}} />
+ </Grid>
+ <Grid item xs={12} md={6} style={{padding:"3vh",display:"flex"}}>
+
+<div style={{padding:"1vh",height:"100%",width:"100%"}}>
+    <Carousel  showThumbs={false} showArrows={true} infiniteLoop={true} showStatus={false} autoPlay={true} labels={false} >
+                <img src={tp71} style={{ objectFit: "cover"}} />
+    </Carousel>
+    </div>
+</Grid>
+
+</div>
+<p ><b><h2> Educația steam - imperativ al timpului</h2></b></p>
+</Item>
+</Grid>
+
+
+
+<Grid  item xs={12} md={6} style={{padding:"6vh"}}>
+ <Item id="allitems" style={{color:"black",textAlign:"center",padding:"3vh",height:"90%"}}>
+{/* <p><b>Făclia: </b>săptamânal de informație, opinie și cultură pedagogică.</p> */}
+
+<div style={{display:"flex"}}>
+
+
+ <Grid item xs={12} md={6} style={{padding:"3vh"}}>
+
+ <img src={tp8} style={{height:"100%",objectFit:"cover",width:"100%",padding:"1vh"}} />
+ </Grid>
+ <Grid item xs={12} md={6} style={{padding:"3vh",display:"flex"}}>
+
+<div style={{padding:"1vh",height:"100%",width:"100%"}}>
+    <Carousel  showThumbs={false} showArrows={true} infiniteLoop={true} showStatus={false} autoPlay={true} labels={false} >
+                <img src={tp81} style={{ objectFit: "cover"}} />
+    </Carousel>
+    </div>
+</Grid>
+
+</div>
+<p ><b><h2> Implementarea educației ste(A)m prin proiecte în cadrul ariei curriculare matematică și științe</h2></b></p>
+</Item>
+</Grid>
+
+
+
+<Grid  item xs={12} md={6} style={{padding:"6vh"}}>
+ <Item id="allitems" style={{color:"black",textAlign:"center",padding:"3vh",height:"90%"}}>
+{/* <p><b>Făclia: </b>săptamânal de informație, opinie și cultură pedagogică.</p> */}
+
+<div style={{display:"flex"}}>
+
+
+ <Grid item xs={12} md={6} style={{padding:"3vh"}}>
+
+ <img src={tp9} style={{height:"100%",objectFit:"cover",width:"100%",padding:"1vh"}} />
+ </Grid>
+ <Grid item xs={12} md={6} style={{padding:"3vh",display:"flex"}}>
+
+<div style={{padding:"1vh",height:"100%",width:"100%"}}>
+    <Carousel  showThumbs={false} showArrows={true} infiniteLoop={true} showStatus={false} autoPlay={true} labels={false} >
+                <img src={tp91} style={{ objectFit:"cover"}} />
+    </Carousel>
+    </div>
+</Grid>
+
+</div>
+<p ><b><h2>Formarea continuă și dezvoltarea profesională a cadrului didactic - premisa calității în educație</h2></b></p>
+</Item>
+</Grid>
 
 
 </>
